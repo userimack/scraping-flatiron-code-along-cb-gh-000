@@ -22,7 +22,10 @@ class Scraper
   
   def print_courses
     doc = self.get_page
-    doc.
+    doc.css(".post").each do |post|
+      course = Course.new 
+      course.title = post.css("h2")
+      course.schedule = post.css()
     
     
 end
